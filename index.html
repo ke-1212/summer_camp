@@ -5,15 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1><a href="https://hardnuts.fun/">ページが遷移しない場合はこれをタップ！</a></h1>
+
+    <div class="main-container">
+        <div class="text-content">
+            <div class="title">
+                <h1><span>間に合いませんでした！</span><span>ごめんなさい...</span> </h1>
+            </div>
+            <div class="main-content">
+                <p>ほんとはこれみたいな簡単なランゲームを実装するつもりでした...</p>
+                <br>
+                <div class="img-container__sample">
+                    <img src="./img/game_sample.webp" alt="">
+                    <button id="comment-btn" onclick="onClickDinasour()"></button>
+                </div>
+                <br>
+                <p>このゲーム自体は<a href="https://dinorunner.com/jp/" target="_blank"
+                        rel="noopener noreferrer">ここで</a>遊べるのでよかったらやってみてください！</p>
+            </div>
+        </div>
+
+        <div class="sub-content">
+            <p>
+                これだけだと寂しいので簡単に自己紹介をば...
+            </p>
+            <ul>
+                <li>なまえ: けー</li>
+                <li>期生: 10期</li>
+                <li>好きなもの: ゲーム、Vaundy、バスケ等...</li>
+            </ul>
+            <p>
+                こんな感じでナッツではWEB制作とかのプログラミングがかかわるやつをやってたりします。<br>
+                携わったのだと<span><a href="https://omikuji.hardnuts.fun/" target="_blank"
+                        rel="noopener noreferrer">ナッツおみくじ</a></span>が簡単にあそべるのでよかったら... <br>
+                あとは昔 <a href="https://ke-1212.github.io/mypage/" target="_blank"
+                    rel="noopener noreferrer">講習会用に作ったサイト</a>とかもあります<br>
+                (quizのくそ問題を当てた方にはお菓子を差し上げます)
+            </p>
+        </div>
+    </div>
+
+
     <script>
-        setTimeout(function () {
-            window.location.href = "https://hardnuts.fun/";
-        }, 100);
+
+        function onClickDinasour() {
+            alert("恐竜 : 「こんにちは！」")
+        }
     </script>
+
 </body>
+
+<style>
+    h1 {
+        font-size: 1.8em;
+        color: #333;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    p {
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1em;
+        color: black;
+        line-height: 2em;
+    }
+
+    ul {
+        box-shadow: 0px 0px 3px silver;
+        border: solid 1px whitesmoke;
+        padding: 0.5em 1em 0.5em 2.3em;
+        position: relative;
+        background: #fafafa;
+    }
+
+    ul,
+    ol {
+        color: #1e366a;
+        border-top: solid #1e366a 1px;
+        /*上のボーダー*/
+        border-bottom: solid #1e366a 1px;
+        /*下のボーダー*/
+        padding: 0.5em 0 0.5em 1.5em;
+    }
+
+    ul li,
+    ol li {
+        line-height: 1.5;
+        padding: 0.5em 0;
+    }
+
+    .img-container__sample {
+        position: relative;
+    }
+
+    #comment-btn {
+        position: absolute;
+        bottom: 30%;
+        left: 4%;
+        width: 7%;
+        height: 16%;
+        opacity: 0;
+    }
+</style>
 
 </html>
